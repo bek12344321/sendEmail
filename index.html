@@ -11,18 +11,26 @@
 
 <body>
     <div class="continer p-5">
-        <div class="row text-center"><h2>Login</h2></div>
+        <div class="row text-center"><h2>Email tasdiqlash</h2></div>
         <div class="row">
             <div class="col-4 offset-4">
-                <form class="form" action="https://formsubmit.co/anvarhaydarniyozov0@gmail.com" method="post">
-                    <input class="form-control" type="text" name="name" required placeholder="">
-                    <input class="form-control" type="text" name="name" required>
-                    <button class="form-control" type="submit">Send</button>
+                <form id="form" class="form" action="" method="post">
+                    <input class="form-control" id="email" type="text" name="name" required placeholder="Email">
+                    <input class="form-control" type="hidden" name="name" value="http://127.0.0.1:5500/success.html" required>
+                    <button class="form-control" onclick="insertValue()" type="submit">Send</button>
                </form>      
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    function insertValue(){
+        var form=document.querySelector("#form")
+        var email=document.querySelector("#email")
+        form.action = "https://formsubmit.co/"+email.value
+    }
+</script>
 
 </html>
 <!-- hbek748@gmail.com -->
